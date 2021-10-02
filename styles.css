@@ -27,11 +27,16 @@ img{
     border-radius: 15px;
     border-color: black;
     border-width: 1px;
+    padding: 10px;
+    height: 15%;
+    width: 15%;
 }
 
 .resultOut{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -39,7 +44,7 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 500px;
+    width: 100%;
 }
 
 img:hover{

@@ -9,31 +9,20 @@ function getAMove(){
 }
 
 function computeResult(computerMove,playerMove){
+    let playerWinConditions = ['StonePaper','PaperScissor','ScissorStone']
+    let computerWinConditions = ['PaperStone','ScissorPaper','StoneScissor']
 
-    if(computerMove == 'Sccissor' && playerMove == 'Stone'){
-        console.log("Computer Wins!")
+    let resultString = computerMove.concat(playerMove)
+    if(playerWinConditions.includes(computerMove.concat(playerMove))){
+        console.log('Player Wins!')
+        document.getElementById('result').innerHTML = 'Player Wins!'
     }
-    
-    else if(computerMove == 'Stone' && playerMove == 'Paper'){
-        console.log("Computer Wins!")
-    }
-
-    else if(computerMove == 'Paper' && playerMove == 'Scissor'){
-        console.log("Computer Wins!")
-    }
-
-    else if(computerMove == 'Sccissor' && playerMove == 'Paper'){
-        console.log("Player Wins!")
-    }
-    else if(computerMove == 'Stone' && playerMove == 'Sccissor'){
-        console.log("Player Wins!")
-    }
-
-    else if(computerMove == 'Paper' && playerMove == 'Stone'){
-        console.log("Player Wins!")
+    else if(computerWinConditions.includes(computerMove.concat(playerMove))){
+        console.log('Computer Wins!')
+        document.getElementById('result').innerHTML = 'Computer Wins!'
     }
     else{
-        console.log("No results possible")
+        console.log('No Result Possible')
+        document.getElementById('result').innerHTML = 'No Result Possible'
     }
-   
 }

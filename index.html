@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>SPS</title>
 </head>
+
 <body>
-    <label>Select your move:</label>
-    <select id="allMoves">
-        <option value="Stone"> Stone </option>
-        <option value="Paper"> Paper </option>
-        <option value="Scissor"> Scissor </option>
-    </select>
-    <p id="move"></p>
-    <button onclick="getAMove()">Play!</button>
-    <br><br>
-    <label>Result:</label>
-    <p id='result'></p>
+    <div class="container-body mx-auto px-4 py-4 flex justify-center flex-col align-center">
+        <div class="mb-4">
+            <div class="title">Select your move:</div>
+            <div class="movesSection my-4">
+                <img src="./Paper.png" width="150" height="100" onclick="getAMove('Paper')">
+                <img src="./Stone.png" width="150" height="100" onclick="getAMove('Stone')">
+                <img src="./Scissor.png" width="150" height="100" onclick="getAMove('Scissor')">
+            </div>   
+        </div>
+        
+        <br><br>
+
+        <div id="resultDiv" class="resultDiv" style="display: none;">
+            <div class="resultOut">
+                <div class="text-large">Your Move:</div>
+                <img id="playerMove" width="150" height="100">
+                
+            </div>
+            <div class="resultOut">
+                <div class="text-large">AI Move:</div>
+                <img id="aiMove" width="150" height="100">
+            </div>
+        </div>
+
+        <div id="result" class="my-4 text-large" style="text-align: center;">
+
+        </div>
+    </div>
+    
 </body>
 <script src="./script.js" ></script>
 </html>

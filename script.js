@@ -28,8 +28,8 @@ function computeResult(computerMove,playerMove){
         document.getElementById('result').style.backgroundColor = 'red'
     }
     else{
-        console.log('No Result Possible')
-        document.getElementById('result').innerHTML = 'No Result Possible'
+        console.log('DRAW')
+        document.getElementById('result').innerHTML = 'DRAW'
         document.getElementById('result').style.backgroundColor = 'grey'
     }
 }

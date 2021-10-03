@@ -1,6 +1,6 @@
 # stone-paper-scissors
 
-## You can see the live demo at: [a link](https://thenewspc.netlify.app/)
+## You can see the live demo at: [SCP](https://thenewspc.netlify.app/)
 
 ![Alt text](./assets/win.png?raw=true "You Win")
 
